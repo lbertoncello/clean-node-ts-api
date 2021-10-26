@@ -1,0 +1,16 @@
+{
+    "files.eol": "\n",
+    "code-runner.executorMap": {
+        "typescript": "yarn ts-node --files",
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll": true
+    },
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.autoIndent": "full",
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false
+    }
+}
