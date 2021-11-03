@@ -78,7 +78,7 @@ describe('DbAddAccount Usecase', () => {
     await expect(account).rejects.toThrow()
   })
 
-  test('Should call Encrypter with correct values', async () => {
+  test('Should call AddAccountRepository with correct values', async () => {
     const { sut, addAccountRepositoryStub } = makeSut()
     const addSpy = jest.spyOn(addAccountRepositoryStub, 'add')
     const accountData = {
