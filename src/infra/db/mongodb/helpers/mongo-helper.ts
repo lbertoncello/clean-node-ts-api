@@ -6,8 +6,10 @@ export const MongoHelper = {
    * the same that JavaScript uses to define the value of an object property.
    */
   client: null as MongoClient,
+  uri: null as string,
 
   async connect (uri: string): Promise<void> {
+    this.uri = uri
     this.client = await MongoClient.connect(uri)
   },
 
@@ -15,7 +17,7 @@ export const MongoHelper = {
     await this.client.close()
   },
 
-  getCollection (name: string): Collection {
+  async getCollection (name: string): Promise<Collection> {
     return this.client.db().collection(name)
   },
 
